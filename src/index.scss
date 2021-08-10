@@ -4,7 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   outline: none;
-  
+
   font-family: "Roboto",-apple-system, system-ui,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,11 +19,6 @@ ol[class] {
 }
 img {
   max-width: 100%;
-  display: block;
-}
-
-body {
-
 }
 
 .block-note{
@@ -36,12 +31,16 @@ body {
   box-shadow: 1px 2px 20px #f3f3f3;
   border-radius: 10px;
   border: 1px solid #f1f1f1;
+  font-size: 14px;
 
   &__sidebar {
     background-color: #f4f6f8;
-    width: 200px;
+    width: 250px;
     height: 100%;
     border-right: 1px solid #f1f1f1;
-    
+    padding: 60px 20px;
   }
+
+  
 }
+

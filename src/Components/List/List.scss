@@ -1,0 +1,44 @@
+.list {
+  margin-bottom: 30px;
+  li{
+    display: flex;
+    align-items:center;
+    cursor: pointer;
+    padding: 10px 12px;
+
+    &.active {
+      background-color:#ffffff;
+      box-shadow:0px 3px 10px rgba(0,0,0,0.04);
+      border-radius:4px;
+    }
+
+    span {
+      display: inline-flex;
+    }
+    span > svg {        
+        margin-right: 8px;
+        path {
+          fill:#7c7c7c;
+        }}
+   span>span {
+        margin-right: 16px;
+    }
+
+    .color-circle {
+      width: 10px;
+      height: 10px;
+      border-radius: 30px;
+      position: relative;
+      left:5px;
+      &--green {
+        background-color: #428883;
+      }
+      &--blue {
+        background-color: #64C4ED;
+      }
+      &--pink {
+        background-color: #FFBBCC;
+      }
+    }
+  }
+  }
