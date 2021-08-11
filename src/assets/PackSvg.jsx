@@ -15,8 +15,8 @@ export const listSvg = (
 
 export const addSvg = (
   <svg
-    width="16"
-    height="16"
+    width="11"
+    height="11"
     viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -24,16 +24,16 @@ export const addSvg = (
     <path
       d="M8 1V15"
       stroke="black"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M1 8H15"
       stroke="black"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -49,9 +49,9 @@ export const checkSvg = (
     <path
       d="M9.29999 1.20001L3.79999 6.70001L1.29999 4.20001"
       stroke="white"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

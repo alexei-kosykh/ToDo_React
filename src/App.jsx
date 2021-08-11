@@ -1,4 +1,5 @@
 import List from "./Components/List/List";
+import AddListButton from "./Components/AddListButton/AddListButton";
 import {
   listSvg,
   addSvg,
@@ -19,7 +20,9 @@ function App() {
             { color: "blue", title: "FrontEnd" },
             { color: "pink", title: "Фильмы и сериалы" },
           ]}
+          isRemovable
         />
+        <AddListButton icon={addSvg} title="Добавить список" />
       </div>
 
       <div className="block-note__tasks"></div>
