@@ -1,10 +1,11 @@
 {
-  "lists": [
-    {"id":1, "name": "Покупки", "coolorId":5},
-    {"id":2, "name": "Фронтенд", "coolorId":4},
-    {"id":3, "name": "Фильмы", "coolorId":3},
-    {"id":4, "name": "Книги", "coolorId":2},
-    {"id":5, "name": "Личное", "coolorId":1}],
+    "lists": [
+    {"id":1, "title": "Покупки", "colorId":5},
+    {"id":2, "title": "Фронтенд", "colorId":4},
+    {"id":3, "title": "Фильмы", "colorId":3},
+    {"id":4, "title": "Книги", "colorId":2},
+    {"id":5, "title": "Личное", "colorId":1}
+    ],
     "tasks": [
       {"id":1, "listId":2, "text":"Изучить JavaScript"},
       {"id":2, "listId":2, "text":"Изучить паттерны проектирования"},
@@ -35,6 +36,5 @@
       {
         "id":8, "hex":"#FF6464", "name":"red"
       }
-    ]
-   
+  ]   
 }
