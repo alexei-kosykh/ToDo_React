@@ -1,23 +1,18 @@
 import classNames from "classnames";
+import ColorCircle from "../ColorCircle";
 
 import "./List.scss";
 
-const List = ({ items, isRemovable }) => {
+const List = ({ items, isRemovable, onClick }) => {
   return (
-    <ul className="list">
+    <ul onClick={onClick} className="list">
       {items.map((item, index) => (
         <li
           key={index}
           className={classNames(item.className, { active: item.active })}
         >
           <span>
-            {item.icon ? (
-              item.icon
-            ) : (
-              <span
-                className={`color-circle color-circle--${item.color}`}
-              ></span>
-            )}
+            {item.icon ? item.icon : <ColorCircle color={item.color} />}
           </span>
           <span>{item.title}</span>
         </li>

@@ -7,3 +7,47 @@
     }
   }
 }
+.add-apear-block {
+  width: 240px;
+  height: 150px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 6px 10px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  padding: 18px;
+  position: relative;
+  top: -25px;
+  left:5px;
+  
+  &__close-btn {
+    position: absolute;
+    right: -9px;
+    top: -9px;
+    cursor: pointer;
+  }
+
+  .button {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  &__colors {
+    margin-top: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 27px;
+  }
+
+  .color-circle {
+    cursor: pointer;
+    width: 20px;
+    height:20px;
+
+  }
+  .classActive, .color-circle:hover {
+    border: 2px solid #d4d4d4;
+    width: 25px;
+      height: 25px;
+      box-shadow: 0px 0px 2px rgb(219, 219, 219);
+  }
+}

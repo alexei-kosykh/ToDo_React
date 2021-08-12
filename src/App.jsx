@@ -1,13 +1,14 @@
-import List from "./Components/List/List";
-import AddListButton from "./Components/AddListButton/AddListButton";
+import List from "./Components/List";
+import AddListButton from "./Components/AddListButton";
 import {
   listSvg,
   addSvg,
   checkSvg,
-  closeSvg,
   editSvg,
   removeSvg,
 } from "./assets/PackSvg";
+
+import DB from "./assets/db.json";
 
 function App() {
   return (
@@ -22,7 +23,11 @@ function App() {
           ]}
           isRemovable
         />
-        <AddListButton icon={addSvg} title="Добавить список" />
+        <AddListButton
+          colors={DB.colors}
+          icon={addSvg}
+          title="Добавить список"
+        />
       </div>
 
       <div className="block-note__tasks"></div>
