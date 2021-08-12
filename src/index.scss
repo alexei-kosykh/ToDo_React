@@ -44,3 +44,33 @@ img {
   
 }
 
+.area-input {
+  background-color: #FFFFFF;
+  border: 1px solid #efefef;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 100%;
+
+  &:focus {
+    border-color: #dbdbdb;
+  }
+}
+
+.button {
+  background-color: #4DD599;
+  border-radius: 4px;
+  color:#ffffff;
+  border:0;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color: #4DD599, $amount: 7%);
+  }
+
+  &:active {
+    background-color: darken($color: #4DD599, $amount: 10%);
+  }
+}
+
