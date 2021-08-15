@@ -20,12 +20,19 @@ function App() {
       return item;
     })
   );
+
+  const onAddList = (obj) => {
+    const newList = [...lists, obj];
+    setLists(newList);
+  };
+
   return (
     <div className="block-note">
       <div className="block-note__sidebar">
         <List items={[{ icon: listSvg, title: "Все задачи", active: true }]} />
         <List items={lists} isRemovable />
         <AddListButton
+          onAdd={onAddList}
           colors={DB.colors}
           icon={addSvg}
           title="Добавить список"
