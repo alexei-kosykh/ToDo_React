@@ -1,9 +1,17 @@
 import classNames from "classnames";
 import ColorCircle from "../ColorCircle";
 
+import removeSvg from "../../assets/icon/removeSvg.svg";
+
 import "./List.scss";
 
-const List = ({ items, isRemovable, onClick }) => {
+const List = ({ items, isRemovable, onRemove, onClick }) => {
+  const removeList = (item) => {
+    if (window.confirm("Хотите удалить?")) {
+      onRemove(item);
+    }
+  };
+
   return (
     <ul onClick={onClick} className="list">
       {items.map((item, index) => (
@@ -15,6 +23,14 @@ const List = ({ items, isRemovable, onClick }) => {
             {item.icon ? item.icon : <ColorCircle color={item.color} />}
           </span>
           <span>{item.title}</span>
+          {isRemovable && (
+            <img
+              onClick={() => removeList(item)}
+              className="list__remove-icon"
+              src={removeSvg}
+              alt="Remove icon"
+            />
+          )}
         </li>
       ))}
     </ul>

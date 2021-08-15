@@ -1,13 +1,8 @@
 import { useState } from "react";
 import List from "./Components/List";
 import AddListButton from "./Components/AddListButton";
-import {
-  listSvg,
-  addSvg,
-  checkSvg,
-  editSvg,
-  removeSvg,
-} from "./assets/PackSvg";
+import { listSvg, addSvg, checkSvg, editSvg } from "./assets/PackSvg";
+import Tasks from "./Components/Tasks";
 
 import DB from "./assets/db.json";
 
@@ -30,7 +25,13 @@ function App() {
     <div className="block-note">
       <div className="block-note__sidebar">
         <List items={[{ icon: listSvg, title: "Все задачи", active: true }]} />
-        <List items={lists} isRemovable />
+        <List
+          items={lists}
+          onRemove={(item) => {
+            console.log(item);
+          }}
+          isRemovable
+        />
         <AddListButton
           onAdd={onAddList}
           colors={DB.colors}
@@ -39,7 +40,7 @@ function App() {
         />
       </div>
 
-      <div className="block-note__tasks"></div>
+      <Tasks />
     </div>
   );
 }
