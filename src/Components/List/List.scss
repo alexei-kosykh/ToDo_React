@@ -1,5 +1,11 @@
 .list {
+  $self: &;
+
   margin-bottom: 30px;
+
+  span:nth-child(2) {
+    flex:1;
+  }
 
   li{
     display: flex;
@@ -9,6 +15,18 @@
 
     &:hover {
       background-color: rgba(235, 235, 235, 0.4);
+
+      #{$self}__remove-icon {
+        opacity: 0.2;
+      }
+    }
+    
+    #{$self}__remove-icon {
+      opacity: 0;
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
 
     &.active {

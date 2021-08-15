@@ -11,6 +11,12 @@ const AddListButton = ({ icon, title, colors, onAdd }) => {
   const [selectedColor, setSelectedColor] = useState(colors[0].id);
   const [inputValue, setInputValue] = useState("");
 
+  const onClose = () => {
+    setShowAddModal(false);
+    setInputValue("");
+    setSelectedColor(colors[0].id);
+  };
+
   const addList = () => {
     if (!inputValue) {
       alert("Ввведите название списка");
@@ -22,9 +28,7 @@ const AddListButton = ({ icon, title, colors, onAdd }) => {
       title: inputValue,
       color,
     });
-    setShowAddModal(false);
-    setInputValue("");
-    setSelectedColor(colors[0].id);
+    onClose();
   };
 
   return (
@@ -42,7 +46,7 @@ const AddListButton = ({ icon, title, colors, onAdd }) => {
       {showAddModal && (
         <div className="add-apear-block">
           <img
-            onClick={() => setShowAddModal(false)}
+            onClick={onClose}
             src={closeSvg}
             alt="Close"
             className="add-apear-block__close-btn"
