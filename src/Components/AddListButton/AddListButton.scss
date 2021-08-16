@@ -3,6 +3,7 @@
     opacity: 0.4;
 
     &:hover {
+      transition: opacity 0.25s ease-in-out;
       opacity: 1;
     }
   }
