@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import ColorCircle from "../ColorCircle";
+import axios from "axios";
 
 import removeSvg from "../../assets/icon/removeSvg.svg";
 
@@ -8,7 +9,9 @@ import "./List.scss";
 const List = ({ items, isRemovable, onRemove, onClick }) => {
   const removeList = (item) => {
     if (window.confirm("Хотите удалить?")) {
-      onRemove(item);
+      axios.delete("http://localhost:3001/lists/" + item.id).then(() => {
+        onRemove(item.id);
+      });
     }
   };
 

@@ -7,7 +7,7 @@ const ColorCircle = ({ color, classActive, onClick }) => {
     <span
       onClick={onClick}
       className={classNames("color-circle", {
-        [`color-circle--${color}`]: color,
+        [`color-circle--${color.name}`]: color,
         classActive,
       })}
     ></span>
