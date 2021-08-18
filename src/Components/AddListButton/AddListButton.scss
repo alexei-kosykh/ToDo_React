@@ -48,7 +48,8 @@
   .classActive, .color-circle:hover {
     border: 2px solid #d4d4d4;
     width: 25px;
-      height: 25px;
-      box-shadow: 0px 0px 2px rgb(219, 219, 219);
+    height: 25px;
+    box-shadow: 0px 0px 2px rgb(219, 219, 219);
+    transition: width 0.3s ease-in-out,height 0.3s ease-in-out;
   }
 }
