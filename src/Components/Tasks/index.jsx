@@ -1,14 +1,30 @@
+import axios from "axios";
+import AddTaskForm from "../AddTaskForm";
+
 import "./Tasks.scss";
 import editSvg from "../../assets/icon/editSvg.svg";
 
-const Tasks = ({ list }) => {
+const Tasks = ({ list, onAddTask, onEditTitle }) => {
+  const editTitle = () => {
+    const newTitle = window.prompt("Введите название списка", list.title);
+    if (newTitle) {
+      onEditTitle(list.id, newTitle);
+      axios
+        .patch("http://localhost:3001/lists/" + list.id, { title: newTitle })
+        .catch(() => {
+          alert("Не удалось обновить название списка");
+        });
+    }
+  };
+
   return (
     <div className="block-note__tasks">
       <h2 className="block-note__tasks_title">
         {list.title}
-        <img src={editSvg} alt="Edit icon" />
+        <img onClick={editTitle} src={editSvg} alt="Edit icon" />
       </h2>
       <div className="block-note__tasks_items">
+        {!list.tasks.length && <h2>Задачи отсутствуют</h2>}
         {list.tasks.map((task) => (
           <div key={task.id} className="block-note__tasks_item-row">
             <div className="block-note__tasks_checkbox">
@@ -34,6 +50,8 @@ const Tasks = ({ list }) => {
             <input readOnly value={task.text} />
           </div>
         ))}
+
+        <AddTaskForm list={list} onAddTask={onAddTask} />
       </div>
     </div>
   );

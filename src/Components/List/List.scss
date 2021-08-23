@@ -5,6 +5,10 @@
 
   span:nth-child(2) {
     flex:1;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   li{
