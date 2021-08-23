@@ -14,14 +14,14 @@
       margin-bottom: 20px;
     }
 
-    &:hover {
+    &_title >&:hover {
       img {
         transition: opacity 0.3s ease-in-out;
         opacity: 0.2;
       }
     }
 
-    img {
+    &_title > img {
       opacity: 0;
       padding: 0px 0px 11px;
       margin-left: 15px;
@@ -112,5 +112,18 @@
           width: 100%;
         }
       } 
+    
+    &_items {
+      h2 {
+        color: #C9D1D3;
+        font-size: 25px;
+        font-family: Montserrat;
+        font-weight: bold;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top:50%;
+      }
+    }
   }
 }

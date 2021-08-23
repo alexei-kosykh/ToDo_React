@@ -52,6 +52,7 @@ img {
   border-radius: 4px;
   padding: 8px 12px;
   width: 100%;
+  font-size: 14px;
 
   &:focus {
     border-color: #dbdbdb;
@@ -65,6 +66,7 @@ img {
   border:0;
   padding: 10px 20px;
   cursor: pointer;
+  font-size: 14px;
 
   &:hover {
     background-color: darken($color: #4DD599, $amount: 7%);
@@ -72,6 +74,24 @@ img {
 
   &:active {
     background-color: darken($color: #4DD599, $amount: 10%);
+  }
+
+  &:disabled {
+    background-color: #b3b3b3;
+  }
+
+  &--grey {
+    background-color: #F4F6F8;
+    color:#444444;
+
+    &:hover {
+      background-color: darken($color: #F4F6F8, $amount: 3%);
+      color:#8a8a8a;
+    }
+    &:active {
+      background-color: darken($color: #F4F6F8, $amount: 6%);
+      color:#6d6d6d;
+    }
   }
 }
 
