@@ -11,16 +11,22 @@ const AddTaskForm = ({ list, onAddTask }) => {
     setInputValue("");
   };
   const date = new Date();
+  const addZeroDate = (date) => {
+    if (date < 10) {
+      date = "0" + date;
+    }
+    return date;
+  };
   const dateNow =
-    date.getDate() +
+    addZeroDate(date.getDate()) +
     "-" +
-    date.getMonth() +
+    addZeroDate(date.getMonth()) +
     "-" +
-    date.getFullYear() +
+    addZeroDate(date.getFullYear()) +
     " " +
-    date.getHours() +
+    addZeroDate(date.getHours()) +
     ":" +
-    date.getMinutes();
+    addZeroDate(date.getMinutes());
 
   const addTask = () => {
     const obj = {
