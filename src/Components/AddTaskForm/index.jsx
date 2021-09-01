@@ -25,7 +25,7 @@ const AddTaskForm = ({ list, onAddTask }) => {
         toogleFormVisible();
       })
       .catch(() => {
-        alert("Ошибка при добавлении задачи");
+        alert("Ошибка при добавлении задачи!");
       })
       .finally(() => {
         setIsLoading(false);
