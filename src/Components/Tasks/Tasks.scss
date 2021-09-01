@@ -14,7 +14,7 @@
       font-size: 32px;
       line-height: 39px;
       color: #64C4ED;
-      border-bottom: 2px solid #f2f2f2;
+      border-bottom: 2px inset;
       padding-bottom: 15px;
       margin-bottom: 20px;
     }
@@ -36,6 +36,10 @@
       &:hover {
         opacity: 0.7;
       }
+    }
+
+    &__text-align {
+      text-align: end;
     }
 
     &__checkbox {
@@ -110,6 +114,8 @@
         margin-bottom: 15px;
         display: flex;
         align-items: center;
+        border-bottom: 2px inset;
+        padding-bottom: 10px;
 
         &:hover &-actions {
           opacity: 1;
@@ -129,8 +135,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 32px;
-            height: 32px;
+            width: 35px;
+            height: 35px;
             background-color: lighten(#f4f6f8, 2%);
             border-radius: 6px;
             margin-left: 5px;
@@ -151,11 +157,20 @@
           }
         }
 
-        p {
+        p:not([dateTime]) {
           margin-left: 15px;
           border:0;
           font-size: 16px;
           width: 100%;
+        }
+
+        p[dateTime] {
+          font-size: 11px;
+          opacity: 0.6;
+          
+          &:hover {
+            opacity: 0.8;   
+          }
         }
       } 
     
