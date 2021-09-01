@@ -7,11 +7,36 @@ import closeSvg from "../../assets/icon/closeSvg.svg";
 
 import "./AddListButton.scss";
 
-const AddListButton = ({ icon, title, colors, onAdd }) => {
+const AddListButton = ({ title, colors, onAdd }) => {
   const [showAddModal, setShowAddModal] = useState(false);
   const [selectedColor, setSelectedColor] = useState(3);
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState("");
+
+  const addSvg = (
+    <svg
+      width="11"
+      height="11"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 1V15"
+        stroke="black"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M1 8H15"
+        stroke="black"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
 
   useEffect(() => {
     if (Array.isArray(colors)) {
@@ -27,23 +52,23 @@ const AddListButton = ({ icon, title, colors, onAdd }) => {
 
   const addList = () => {
     if (!inputValue) {
-      alert("Ввведите название списка");
+      alert("Введите название списка");
       return;
     }
     setIsLoading(true);
     axios
       .post("http://localhost:3001/lists", {
-        title: inputValue,
+        name: inputValue,
         colorId: selectedColor,
       })
       .then(({ data }) => {
-        const color = colors.filter((c) => c.id === selectedColor)[0].name;
-        const listObj = { ...data, color: { name: color } };
+        const color = colors.filter((c) => c.id === selectedColor)[0];
+        const listObj = { ...data, color, tasks: [] };
         onAdd(listObj);
         onClose();
       })
       .catch(() => {
-        alert("Ошибка при добавлении списка");
+        alert("Ошибка при добавлении списка!");
       })
       .finally(() => {
         setIsLoading(false);
@@ -57,7 +82,7 @@ const AddListButton = ({ icon, title, colors, onAdd }) => {
         items={[
           {
             className: "list__add-list-button",
-            icon: icon,
+            icon: addSvg,
             title: title,
           },
         ]}

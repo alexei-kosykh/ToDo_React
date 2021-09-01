@@ -35,19 +35,20 @@ const List = ({
           onClick={onClickItem ? () => onClickItem(item) : null}
         >
           <span>
-            {item.icon ? item.icon : <ColorCircle color={item.color} />}
+            {item.icon
+              ? item.icon
+              : item.color && <ColorCircle color={item.color.name} />}
           </span>
           <span>
             {item.title}
-            {item.tasks && ` (${item.tasks.length}) `}
+            {item.tasks && ` (${item.tasks.length})`}
           </span>
-
           {isRemovable && (
             <img
-              onClick={() => removeList(item)}
               className="list__remove-icon"
               src={removeSvg}
               alt="Remove icon"
+              onClick={() => removeList(item)}
             />
           )}
         </li>
