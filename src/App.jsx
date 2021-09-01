@@ -7,8 +7,9 @@ function App() {
   const [lists, setLists] = useState(null);
   const [colors, setColors] = useState(null);
   const [activeItem, setActiveItem] = useState(null);
-  let history = useHistory();
-  let location = useLocation();
+  const [dateTime, setDateTime] = useState("");
+  const history = useHistory();
+  const location = useLocation();
 
   useEffect(() => {
     axios

@@ -10,11 +10,23 @@ const AddTaskForm = ({ list, onAddTask }) => {
     setVisibleForm(!visibleForm);
     setInputValue("");
   };
+  const date = new Date();
+  const dateNow =
+    date.getDate() +
+    "-" +
+    date.getMonth() +
+    "-" +
+    date.getFullYear() +
+    " " +
+    date.getHours() +
+    ":" +
+    date.getMinutes();
 
   const addTask = () => {
     const obj = {
       listId: list.id,
       text: inputValue,
+      time: dateNow,
       completed: false,
     };
     setIsLoading(true);
