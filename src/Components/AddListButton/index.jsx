@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import List from "../List";
 import ColorCircle from "../ColorCircle";
+import { useHistory } from "react-router-dom";
 
 import closeSvg from "../../assets/icon/closeSvg.svg";
 
@@ -12,6 +13,7 @@ const AddListButton = ({ title, colors, onAdd }) => {
   const [selectedColor, setSelectedColor] = useState(3);
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState("");
+  const history = useHistory();
 
   const addSvg = (
     <svg
@@ -58,13 +60,14 @@ const AddListButton = ({ title, colors, onAdd }) => {
     setIsLoading(true);
     axios
       .post("http://localhost:3001/lists", {
-        name: inputValue,
+        title: inputValue,
         colorId: selectedColor,
       })
       .then(({ data }) => {
         const color = colors.filter((c) => c.id === selectedColor)[0];
         const listObj = { ...data, color, tasks: [] };
         onAdd(listObj);
+        history.push(`/lists/${listObj.id}`);
         onClose();
       })
       .catch(() => {
@@ -109,7 +112,7 @@ const AddListButton = ({ title, colors, onAdd }) => {
               <ColorCircle
                 onClick={() => setSelectedColor(color.id)}
                 key={color.id}
-                color={color}
+                color={color.name}
                 classActive={selectedColor === color.id && "active"}
               />
             ))}

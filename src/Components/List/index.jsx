@@ -35,9 +35,7 @@ const List = ({
           onClick={onClickItem ? () => onClickItem(item) : null}
         >
           <span>
-            {item.icon
-              ? item.icon
-              : item.color && <ColorCircle color={item.color.name} />}
+            {item.icon ? item.icon : <ColorCircle color={item.color.name} />}
           </span>
           <span>
             {item.title}
