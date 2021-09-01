@@ -7,7 +7,6 @@ function App() {
   const [lists, setLists] = useState(null);
   const [colors, setColors] = useState(null);
   const [activeItem, setActiveItem] = useState(null);
-  const [dateTime, setDateTime] = useState("");
   const history = useHistory();
   const location = useLocation();
 

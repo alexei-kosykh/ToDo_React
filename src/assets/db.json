@@ -37,84 +37,84 @@
       "listId": 2,
       "text": "Изучить JavaScript",
       "completed": false,
-      "time": "1-8-2021 11:27"
+      "time": "05-07-2021 12:27"
     },
     {
       "id": 2,
       "listId": 2,
       "text": "Изучить паттерны проектирования",
       "completed": false,
-      "time": "1-8-2021 11:27"
+      "time": "09-07-2021 11:07"
     },
     {
       "id": 3,
       "listId": 2,
       "text": "React hooks",
       "completed": true,
-      "time": "1-8-2021 11:27"
+      "time": "01-08-2021 01:27"
     },
     {
       "id": 4,
       "listId": 2,
       "text": "Redux (redux-observable, redux-saga)",
       "completed": false,
-      "time": "1-8-2021 11:27"
+      "time": "01-08-2021 11:27"
     },
     {
       "id": 5,
       "listId": 3,
       "text": "Chto-to",
       "completed": true,
-      "time": "1-8-2021 11:27"
+      "time": "01-08-2021 11:27"
     },
     {
       "listId": 3,
       "text": "kkl",
       "completed": false,
       "id": 6,
-      "time": "1-8-2021 11:27"
+      "time": "01-08-2021 11:27"
     },
     {
       "listId": 3,
       "text": "er",
       "completed": false,
       "id": 7,
-      "time": "1-8-2021 11:27"
+      "time": "01-08-2021 11:27"
     },
     {
       "listId": 3,
       "text": "jlk",
       "completed": false,
       "id": 8,
-      "time": "1-8-2021 11:27"
+      "time": "01-08-2021 11:27"
     },
     {
       "listId": 3,
       "text": "jk",
       "completed": false,
       "id": 9,
-      "time": "1-8-2021 11:27"
-    },
-    {
-      "listId": 6,
-      "text": "21",
-      "time": "1-8-2021 14:24",
-      "completed": false,
-      "id": 10
-    },
-    {
-      "listId": 6,
-      "text": "ds",
-      "time": "1-8-2021 14:45",
-      "completed": false,
-      "id": 11
+      "time": "01-08-2021 11:27"
     },
     {
       "listId": 3,
       "text": "dfsfd",
-      "time": "1-8-2021 15:8",
+      "time": "01-08-2021 15:08",
       "completed": false,
       "id": 12
+    },
+    {
+      "listId": 6,
+      "text": "sad",
+      "time": "01-08-2021 15:17",
+      "completed": false,
+      "id": 13
+    },
+    {
+      "listId": 6,
+      "text": "sdf",
+      "time": "01-08-2021 15:20",
+      "completed": false,
+      "id": 14
     }
   ],
   "colors": [
