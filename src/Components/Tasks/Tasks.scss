@@ -114,6 +114,11 @@
         &:hover &-actions {
           opacity: 1;
         }
+
+        p[completed="true"] {
+          opacity: 0.4;
+          text-decoration: line-through;
+        }
   
         &-actions {
           display: flex;
