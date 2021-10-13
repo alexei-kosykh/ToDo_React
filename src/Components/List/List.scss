@@ -1,0 +1,62 @@
+.list {
+  $self: &;
+
+  margin-bottom: 30px;
+
+  span:nth-child(2) {
+    flex:1;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  li{
+    display: flex;
+    align-items:center;
+    cursor: pointer;
+    padding: 10px 12px;
+    transition: background-color 0.25s ease-in-out;
+
+    &:hover {
+      background-color: rgba(235, 235, 235, 0.4);
+
+      #{$self}__remove-icon {
+        opacity: 0.2;
+      }
+    }
+    
+    #{$self}__remove-icon {
+      transition: opacity 0.3s ease-in-out;
+      opacity: 0;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &.active {
+      background-color:#ffffff;
+      box-shadow:0px 3px 10px rgba(0,0,0,0.04);
+      border-radius:4px;
+    }
+
+    .color-circle {
+      position: relative;
+      left:5px;
+    }
+
+    span {
+      display: inline-flex;
+    }
+    span > svg {        
+        margin-right: 8px;
+        path {
+          fill:#7c7c7c;
+        }}
+   span>span {
+        margin-right: 16px;
+    }
+    }
+  }
+  
